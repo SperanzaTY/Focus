@@ -1,22 +1,18 @@
-package com.example.cloud_lock;
+package com.app.lockscreen;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
-import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.Collections;
-import java.util.Comparator;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.app.demo.R;
+
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
@@ -56,7 +52,8 @@ public class Lock_Rank extends AppCompatActivity {
             @Override
             public void done(List<User_Name_List> object, BmobException e) {
                 if (e == null) {
-                    for(int i=0;i<5;i++) {
+                    int maxlen=50<object.size()?50:object.size();
+                    for(int i=0;i<maxlen;i++) {
                         Message msg  = new Message();
                         msg.what=1;
                         msg.obj=object.get(i);
@@ -67,11 +64,11 @@ public class Lock_Rank extends AppCompatActivity {
                     msg.what=2;
                     handler.sendMessage(msg);
 
-                    Toast.makeText(Lock_Rank.this, ""+object.get(0).getUser_Name(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Lock_Rank.this, ""+object.get(0).getUser_Name(), Toast.LENGTH_SHORT).show();
 
                 } else {
                     //Log.e("BMOB", e.toString());
-                    Toast.makeText(Lock_Rank.this, "查询失败，返回objectId为：", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Lock_Rank.this, "查询失败，返回objectId为：", Toast.LENGTH_SHORT).show();
                 }
             }
         });

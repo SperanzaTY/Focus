@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -50,7 +49,7 @@ tools:context=".MainActivity">
     android:layout_height="80dp"
     android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/get_time_background"
         >
 
@@ -67,7 +66,7 @@ tools:context=".MainActivity">
             android:id="@+id/fen"
             android:gravity="center"
             android:layout_weight="4"
-            android:inputType="phone"
+            android:inputType="number"
             android:singleLine="true"/>
 
         <TextView
@@ -93,7 +92,7 @@ tools:context=".MainActivity">
             android:id="@+id/second"
             android:gravity="center"
             android:layout_weight="4"
-            android:inputType="phone"
+            android:inputType="number"
             android:singleLine="true"/>
 
         <TextView
@@ -118,12 +117,21 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/start_float_window"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/lock_button_shape_round1"
         android:text="开始锁屏" />
+
+    <Button
+        android:id="@+id/rank"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/lock_button_shape_round1"
+        android:text="专注排行榜" />
 
 
 </LinearLayout>

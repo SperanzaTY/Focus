@@ -7,5 +7,5 @@
             <corners android:radius="15dip" />
         </shape>
     </item>
-    <item android:drawable="@drawable/lock_button_shape_round" />
+    <item android:drawable="@drawable/button_shape_round_second" />
 </ripple>

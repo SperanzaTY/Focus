@@ -1,4 +1,4 @@
-package com.app.lockscreen;
+package com.app.shop.mylibrary.beans;
 
 import cn.bmob.v3.BmobObject;
 
@@ -7,7 +7,7 @@ public class User_Name_List extends BmobObject {
     private Integer Lock_Time;
     private String ID;
 
-    public User_Name_List(String a,Integer time){
+    public User_Name_List(String a, Integer time){
         this.User_Name=a;
         this.Lock_Time=time;
     }

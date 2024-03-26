@@ -1,4 +1,4 @@
-package com.example.cloud_lock;
+package com.app.lockscreen;
 
 import cn.bmob.v3.BmobObject;
 

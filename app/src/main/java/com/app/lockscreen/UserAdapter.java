@@ -1,15 +1,14 @@
-package com.example.cloud_lock;
+package com.app.lockscreen;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import com.app.demo.R;
+
 import java.util.LinkedList;
 
 public class UserAdapter extends BaseAdapter {
@@ -48,7 +47,7 @@ public class UserAdapter extends BaseAdapter {
 
 
         user_name.setText(mData.get(position).getUser_Name());
-        lock_time.setText(""+mData.get(position).getLock_Time());
+        lock_time.setText(""+mData.get(position).getLock_Time()+"min");
         int num = position+1;
         rank_num.setText(""+num);
         return convertView;
